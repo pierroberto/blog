@@ -11,8 +11,7 @@ export class ListViewComponent implements OnInit {
   constructor(private fakedb: FakedbService) { }
   list;
   ngOnInit() {
-    this.list = this.fakedb.getPosts()
-    console.log('res', this.list)
+    this.list = this.fakedb.getPost(1)
   }
 
 }
