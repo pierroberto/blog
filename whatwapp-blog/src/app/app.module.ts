@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { HttpClient } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -9,6 +11,8 @@ import { AppRoutingModule } from './/app-routing.module';
 import { ListViewComponent } from './components/list-view/list-view.component';
 import { ItemViewComponent } from './components/item-view/item-view.component';
 
+import { FakedbService } from './services/fakedb.service';
+import { InMemoryDataService }  from './in-memory-data.service';
 
 @NgModule({
   declarations: [
@@ -16,13 +20,17 @@ import { ItemViewComponent } from './components/item-view/item-view.component';
     NavbarComponent,
     LoginComponent,
     ListViewComponent,
-    ItemViewComponent
+    ItemViewComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false }
+    )
   ],
-  providers: [],
+  providers: [FakedbService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

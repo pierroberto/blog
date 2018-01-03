@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FakedbService } from '../../services/fakedb.service';
 
 @Component({
   selector: 'app-list-view',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListViewComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private fakedb: FakedbService) { }
+  list;
   ngOnInit() {
+    this.list = this.fakedb.getPosts()
+    console.log('res', this.list)
   }
 
 }
