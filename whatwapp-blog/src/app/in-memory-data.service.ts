@@ -6,6 +6,9 @@ export class InMemoryDataService implements InMemoryDbService {
       {id: 1, title: 'hello', author: 'rob', date: 'date', content: 'long content'},
       {id: 2, title: 'hello', author: 'rob', date: 'date', content: 'long content'}
     ];
-    return {posts};
+    const authors = [
+      {id: 1, username: 'bob', password: 'hello'}
+    ]
+    return {posts, authors};
   }
 }
