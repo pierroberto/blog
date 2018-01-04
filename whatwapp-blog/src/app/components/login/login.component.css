@@ -11,26 +11,12 @@
 }
 
 .login__button {
-  border: none;
   background-color: #00007F;
   color: #fff;
-  border-radius: 4px;
-  font-size: 20px;
-  width: 100%;
-  margin: 20px 0;
-  padding: 10px 0;
-  letter-spacing: 2px;
 }
 
 .login__input {
-  width: 100%;
-  display: block;
-  padding: 10px 0;
-  margin: 10px 0;
-  font-size: 20px;
-  border: none;
-  border-bottom: 1px solid #ccc;
-  outline: none;
+
 }
 
 .login__title {

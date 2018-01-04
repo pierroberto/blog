@@ -15,6 +15,7 @@ import { ItemViewComponent } from './components/item-view/item-view.component';
 import { FakedbService } from './services/fakedb.service';
 import { InMemoryDataService }  from './in-memory-data.service';
 import { ItemDetailsComponent } from './components/item-details/item-details.component';
+import { PostComponent } from './components/post/post.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ItemDetailsComponent } from './components/item-details/item-details.com
     ListViewComponent,
     ItemViewComponent,
     ItemDetailsComponent,
+    PostComponent,
   ],
   imports: [
     BrowserModule,

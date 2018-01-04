@@ -22,7 +22,7 @@ export class InMemoryDataService implements InMemoryDbService {
       {id: 2, username: 'user', password: 'user'}
     ];
 
-    const login = [{id: 0, status: false}];
+    const login = [{id: 0, status: false, user: ''}];
 
     return {posts, authors, login};
   }

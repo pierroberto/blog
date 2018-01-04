@@ -6,12 +6,14 @@ import {Http, Response} from '@angular/http';
 export class FakedbService {
 
   constructor(private http: HttpClient) { }
-
+  list;
   private postUrl = 'api/posts'
 
-  addPost(title, author, date, content) {
-    return this.http.post('api/posts', {title, author, date, content})
-    .subscribe(res => console.log('res post', res))
+  addPost(post) {
+    const httpOptions = {
+      headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+    };
+    return this.http.post('api/posts', post, httpOptions);
   }
 
   getUser(username, password) {

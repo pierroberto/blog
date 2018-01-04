@@ -1,8 +1,10 @@
-<div *ngIf="logged" class="button">
-  <div class="button__text">
-    Write a new post
+<a routerLink='/new'>
+  <div class="button"> <!-- ADDCHECK *ngIf="logged" -->
+    <div class="button__text">
+      Write a new post
+    </div>
   </div>
-</div>
+</a>
 <div class="list">
   <ul class="list__list">
     <li class="list__item" *ngFor="let item of list">
