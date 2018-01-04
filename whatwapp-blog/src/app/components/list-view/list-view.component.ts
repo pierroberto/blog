@@ -10,11 +10,16 @@ export class ListViewComponent implements OnInit {
 
   constructor(private fakedb: FakedbService) { }
   list;
+  logged: boolean;
 
   ngOnInit() {
     this.fakedb.getPosts().subscribe(fullList => {
       this.list = fullList
+      this.fakedb.isLogged().subscribe(logged => {
+        if (logged[0].status) this.logged = true
+      })
     });
+
   }
 
 }

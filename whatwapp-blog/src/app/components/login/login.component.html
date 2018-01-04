@@ -1,8 +1,9 @@
 <div class="login">
   <h1 class="login__title">Login</h1>
   <div class="login__wrapper">
-    <input class="login__input" [(ngModel)] = "username" placeholder="Username *"/>
-    <input class="login__input" [(ngModel)] = "password" placeholder="Password *"/>
+    <input class="login__input" [(ngModel)] = "username" placeholder="Username *" />
+    <input class="login__input" [(ngModel)] = "password" placeholder="Password *" />
+    <h4 *ngIf="!isLogged" class="login__warning">Invalid credentials</h4>
     <button class="login__button" (click)="login()">Submit</button>
   </div>
 </div>

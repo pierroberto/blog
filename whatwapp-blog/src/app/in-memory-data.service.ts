@@ -20,7 +20,10 @@ export class InMemoryDataService implements InMemoryDbService {
     const authors = [
       {id: 1, username: 'admin', password: 'admin'},
       {id: 2, username: 'user', password: 'user'}
-    ]
-    return {posts, authors};
+    ];
+
+    const login = [{id: 0, status: false}];
+
+    return {posts, authors, login};
   }
 }

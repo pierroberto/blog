@@ -39,6 +39,12 @@
   margin-left: 10px;
 }
 
+.login__warning {
+  margin: 0;
+  text-align: center;
+  color: red;
+}
+
 .login__wrapper {
 
 }
