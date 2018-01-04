@@ -18,7 +18,7 @@ export class FakedbService {
   }
 
   getPosts() {
-    return this.http.get(this.postUrl).subscribe(res => res);
+    return this.http.get(this.postUrl);
   }
 
   getPost (id: number) {

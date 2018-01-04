@@ -1,0 +1,25 @@
+.item {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item__arrow {
+
+}
+
+.item__content {
+
+}
+
+.item__info {
+  font-size: 10px;
+  margin: 5px 0;
+  letter-spacing: 0.5px;
+}
+
+.item__title {
+  font-size: 20px;
+  letter-spacing: 2px;
+}

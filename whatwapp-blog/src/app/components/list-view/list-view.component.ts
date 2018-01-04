@@ -10,8 +10,11 @@ export class ListViewComponent implements OnInit {
 
   constructor(private fakedb: FakedbService) { }
   list;
+
   ngOnInit() {
-    this.list = this.fakedb.getPost(1)
+    this.fakedb.getPosts().subscribe(fullList => {
+      this.list = fullList
+    });
   }
 
 }
