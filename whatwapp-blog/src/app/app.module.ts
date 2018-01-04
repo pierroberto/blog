@@ -14,6 +14,7 @@ import { ItemViewComponent } from './components/item-view/item-view.component';
 
 import { FakedbService } from './services/fakedb.service';
 import { InMemoryDataService }  from './in-memory-data.service';
+import { ItemDetailsComponent } from './components/item-details/item-details.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { InMemoryDataService }  from './in-memory-data.service';
     LoginComponent,
     ListViewComponent,
     ItemViewComponent,
+    ItemDetailsComponent,
   ],
   imports: [
     BrowserModule,
