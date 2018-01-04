@@ -1,6 +1,5 @@
 <div class="list">
   <ul class="list__list">
-    <div *ngIf="logged">hello</div>
     <li class="list__item" *ngFor="let item of list">
       <app-item-view [item]="item"></app-item-view>
     </li>

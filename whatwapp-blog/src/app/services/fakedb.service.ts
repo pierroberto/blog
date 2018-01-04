@@ -24,7 +24,7 @@ export class FakedbService {
 
   getPost (id: number) {
     const url = `api/posts/${id}`;
-    return this.http.get(url).subscribe(res => res);
+    return this.http.get(url);
   }
 
   isLogged () {
@@ -32,7 +32,6 @@ export class FakedbService {
   }
 
   login (status) {
-    console.log('boolean', status)
     const httpOptions = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' })
     };
