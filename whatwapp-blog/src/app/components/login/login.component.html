@@ -1,8 +1,8 @@
 <div class="login">
   <h1 class="login__title">Login</h1>
   <div class="login__wrapper">
-    <input class="login__input" id="username" placeholder="Username *"/>
-    <input class="login__input" id="password" placeholder="Password *"/>
-    <button class="login__button">Submit</button>
+    <input class="login__input" [(ngModel)] = "username" placeholder="Username *"/>
+    <input class="login__input" [(ngModel)] = "password" placeholder="Password *"/>
+    <button class="login__button" (click)="login()">Submit</button>
   </div>
 </div>
