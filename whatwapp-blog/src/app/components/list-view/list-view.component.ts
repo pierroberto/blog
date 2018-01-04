@@ -11,7 +11,8 @@ export class ListViewComponent implements OnInit {
   constructor(private fakedb: FakedbService) { }
   list;
   logged: boolean;
-
+  date: string;
+  hour: string;
   ngOnInit() {
     this.fakedb.getPosts().subscribe(fullList => {
       this.list = fullList
