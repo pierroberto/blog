@@ -23,11 +23,11 @@ export class LoginComponent implements OnInit {
       const user = this.list
         .filter(author => author.username === this.username)
         .filter(author => author.password === this.password)
-      if (!user.length)
+      if (!user.length) {
         this.fakedb.isLogged().subscribe(logged => {
           this.isLogged = logged[0].status
         });
-      else {
+      } else {
         this.fakedb.login({id:0, status: true, user: this.username})
         .subscribe(response => this.router.navigate(['/post']));
       }

@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+const moment = require('moment');
 
 @Component({
   selector: 'app-item-view',
@@ -12,6 +13,14 @@ export class ItemViewComponent implements OnInit {
 
   @Input() item;
 
+  date: string;
+  hour: string;
+
+  convertTime(time) {
+    this.date = moment(this.item.date).format('dddd, MMMM DD, YYYY');
+    this.hour = moment(this.item.date).format('hh:mm');
+    return `${this.date} at ${this.hour}`;
+  }
   ngOnInit() {
 
   }

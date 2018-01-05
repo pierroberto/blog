@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FakedbService } from '../../services/fakedb.service';
 import { ActivatedRoute, Router } from '@angular/router';
-const moment = require('moment')
+const moment = require('moment');
 
 @Component({
   selector: 'app-item-details',
@@ -27,8 +27,8 @@ export class ItemDetailsComponent implements OnInit {
       this.fakedb.getPost(params.id).subscribe(item => {
         this.id = params.id
         this.item = item;
-        this.date = moment.unix(this.item.date).format('dddd, MMMM DD, YYYY');
-        this.hour = moment.unix(this.item.date).format('hh:mm');
+        this.date = moment(this.item.date).format('dddd, MMMM DD, YYYY');
+        this.hour = moment(this.item.date).format('hh:mm');
       })
     })
     this.fakedb.isLogged().subscribe(logged => {

@@ -7,13 +7,13 @@ export class InMemoryDataService implements InMemoryDbService {
         id: 1,
         title: "Chrome Extensions in React + Redux",
         author: 'Pier Roberto',
-        date: 1515061097,
+        date: 1515161632611,
         content: 'If you want to use React + Redux on your Chrome extension is because you probably need some sort of routing and persistency of the data. Unfortunately Chrome Extensions and in particular popups are not persistent by default.'},
       {
         id: 2,
         title: 'How to save tabs in Chrome with Pin Tabs',
         author: 'Pier Roberto',
-        date: 1515061230,
+        date: 1515161632611,
         content: 'What I really need is a sort of auto-expiring bookmarks tool. The idea is to have something that keep track of what I saved but only for a very short period of time. I need a kind of box which after a period is emptied by an automatic timer.'
       }
     ];
