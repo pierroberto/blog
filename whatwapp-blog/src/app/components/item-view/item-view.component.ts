@@ -13,6 +13,7 @@ export class ItemViewComponent implements OnInit {
   @Input() item;
 
   ngOnInit() {
+
   }
 
 }

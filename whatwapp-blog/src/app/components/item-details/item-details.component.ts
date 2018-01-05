@@ -20,11 +20,9 @@ export class ItemDetailsComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe(params => {
       this.fakedb.getPost(params.id).subscribe(item => {
-        console.log('item', item)
         this.item = item;
         this.date = moment.unix(this.item.date).format('dddd, MMMM DD, YYYY');
         this.hour = moment.unix(this.item.date).format('hh:mm');
-        console.log('date', this.date)
       })
     })
     this.fakedb.isLogged().subscribe(logged => {

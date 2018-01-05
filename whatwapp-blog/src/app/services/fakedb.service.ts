@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import {Http, Response} from '@angular/http';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Injectable()
 export class FakedbService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private route:ActivatedRoute, private router:Router) { }
   list;
   private postUrl = 'api/posts'
 
@@ -22,6 +23,26 @@ export class FakedbService {
 
   getPosts() {
     return this.http.get(this.postUrl);
+  }
+
+  editPost (newPost, id) {
+    let index = 0;
+    const httpOptions = {
+      headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+    };
+    return this.getPosts().subscribe(posts => {
+      this.list = posts;
+      // I go through all the posts in order to find the one I want to replace
+      for (let i = 0; i < this.list.length; i++) {
+        if (this.list[i].id === Number(newPost.id)) {
+          index = i;
+        }
+      }
+      this.list[index] = newPost;
+      return this.http.put('api/posts', this.list[index], httpOptions).subscribe(_ => {
+        this.router.navigate([`/post/${id}`]);
+      });
+    });
   }
 
   getPost (id: number) {

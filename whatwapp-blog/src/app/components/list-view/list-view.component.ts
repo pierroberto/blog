@@ -17,7 +17,7 @@ export class ListViewComponent implements OnInit {
     this.fakedb.getPosts().subscribe(fullList => {
       this.list = fullList
       this.fakedb.isLogged().subscribe(logged => {
-        if (logged[0].status) this.logged = true
+        if (logged[0].status) this.logged = true;
       })
     });
 

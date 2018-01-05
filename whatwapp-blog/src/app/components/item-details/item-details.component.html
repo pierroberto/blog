@@ -2,7 +2,7 @@
   <div class="details__wrapper">
     <div class="details__title">{{item.title}}</div>
     <div *ngIf="logged" class="details__iconsWrapper">
-      <i class="fa fa-pencil fa-2x details__spacing" aria-hidden="true"></i>
+      <a routerLink='/post/{{item.id}}/edit'><i class="fa fa-pencil fa-2x details__spacing" aria-hidden="true"></i></a>
       <i class="fa fa-trash-o fa-2x details__spacing" aria-hidden="true"></i>
     </div>
   </div>

@@ -1,7 +1,8 @@
 <div class="post">
   <form class="post__form">
-    <input name="title" [(ngModel)]="post.title" type="text" placeholder="Title *"/>
+    <input name="title" [(ngModel)]="post.title" type="text" placeholder="Title *" />
     <textarea name="content" [(ngModel)]="post.content" rows="20" cols="2" placeholder="Content: *"></textarea>
     <button (click)="addPost()" class="btn">Save</button>
+    <button (click)="updatePost()" class="btn">Update</button>
   </form>
 </div>
