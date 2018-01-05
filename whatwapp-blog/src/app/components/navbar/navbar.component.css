@@ -1,5 +1,6 @@
 .navbar {
   padding: 0 30px;
+  margin-bottom: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -14,6 +15,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.navbar__link {
+  cursor: pointer;
 }
 
 .navbar__right {

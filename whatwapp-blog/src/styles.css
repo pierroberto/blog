@@ -5,6 +5,10 @@ a {
   padding: 0;
 }
 
+a:visited {
+  color: #000B79;
+}
+
 body,
 html {
   margin: 0;
