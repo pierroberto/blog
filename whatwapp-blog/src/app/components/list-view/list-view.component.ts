@@ -14,7 +14,10 @@ export class ListViewComponent implements OnInit {
 
   ngOnInit() {
     this.fakedb.getPosts().subscribe(fullList => {
-      this.list = fullList
+      this.list = fullList;
+      this.list = this.list.sort((a,b) => {
+        return b.date - a.date;
+      });
       this.fakedb.isLogged().subscribe(logged => {
         if (logged[0].status) this.logged = true;
       })
