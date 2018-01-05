@@ -12,11 +12,12 @@ export class ItemDetailsComponent implements OnInit {
 
   constructor(private fakedb: FakedbService, private route:ActivatedRoute, private router:Router) { }
 
-  item;
+  //item: any;
   id : number;
   date: string;
   hour: string;
   logged: boolean;
+  item: any;
 
   deletePost () {
     return this.fakedb.deletePost(Number(this.id));

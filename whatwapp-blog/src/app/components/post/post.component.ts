@@ -13,9 +13,11 @@ export class PostComponent implements OnInit {
 
   list;
   post = {id: 0, title: '', content: '', author: '', date: 0};
+  edit = false;
   id: number;
   user: string;
   existingId: number;
+  item: any;
 
   addPost() {
     this.fakedb.isLogged().subscribe(userLogin => {
@@ -63,11 +65,11 @@ export class PostComponent implements OnInit {
   }
 
   ngOnInit() {
+    //If in the URL there are no params, then I am getting
+    //the list of all the posts in order to get the highest id
+    //which will be used to create a new post...
     const editPost = this.route.params.subscribe(params => {
-      //If in the URL there are no params, then I am getting
-      //the list of all the posts in order to get the highest id
-      //which will be used to create a new post...
-      if (!params) {
+      if (!params.id) {
         this.fakedb.getPosts().subscribe(fullList => {
           this.list = fullList;
           this.id = this.list[this.list.length - 1].id;
@@ -75,10 +77,12 @@ export class PostComponent implements OnInit {
       //... else it means that the user wants to edit the post
       // and then I need the id in order to get the right one.
       } else {
+        this.edit = true;
         this.existingId = params.id
         return this.fakedb.getPost(params.id).subscribe(item => {
-          this.post.title = item.title;
-          this.post.content = item.content;
+          this.item = item;
+          this.post.title = this.item.title;
+          this.post.content = this.item.content;
         })
       }
     })
