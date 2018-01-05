@@ -4,13 +4,13 @@ export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const posts = [
       {
-        id: 1,
+        id: 2,
         title: "Chrome Extensions in React + Redux",
         author: 'Pier Roberto',
         date: 1515161632611,
         content: 'If you want to use React + Redux on your Chrome extension is because you probably need some sort of routing and persistency of the data. Unfortunately Chrome Extensions and in particular popups are not persistent by default.'},
       {
-        id: 2,
+        id: 1,
         title: 'How to save tabs in Chrome with Pin Tabs',
         author: 'Pier Roberto',
         date: 1515161632611,

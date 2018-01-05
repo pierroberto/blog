@@ -11,6 +11,7 @@ export class FakedbService {
   private postUrl = 'api/posts'
 
   addPost(post) {
+    console.log('post info', post)
     const httpOptions = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' })
     };
