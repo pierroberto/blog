@@ -45,6 +45,14 @@ export class FakedbService {
     });
   }
 
+  deletePost(id) {
+    const httpOptions = {
+      headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+    };
+    return this.http.delete(`api/posts/${id}`)
+      .subscribe(_ => this.router.navigate([`/post`]))
+  }
+
   getPost (id: number) {
     const url = `api/posts/${id}`;
     return this.http.get(url);

@@ -13,13 +13,19 @@ export class ItemDetailsComponent implements OnInit {
   constructor(private fakedb: FakedbService, private route:ActivatedRoute, private router:Router) { }
 
   item;
+  id : number;
   date: string;
   hour: string;
   logged: boolean;
 
+  deletePost () {
+    return this.fakedb.deletePost(Number(this.id));
+  }
+
   ngOnInit() {
     this.route.params.subscribe(params => {
       this.fakedb.getPost(params.id).subscribe(item => {
+        this.id = params.id
         this.item = item;
         this.date = moment.unix(this.item.date).format('dddd, MMMM DD, YYYY');
         this.hour = moment.unix(this.item.date).format('hh:mm');
