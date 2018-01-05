@@ -1,6 +1,6 @@
 # Blog
 
-This is an example of blog developed in Angular. It has not db and it has been used `angular-in-memory-web-api` in order to keep temporary data. You can read posts added if you are an anonymous user. You can login as author with either one of this accounts.
+This is an example of blog developed in Angular. It has no db and it has been used `angular-in-memory-web-api` in order to keep temporary data. If you are an anonymous user you can only read the posts added. You can login as author with either one of following accounts:
 
 | Username | Password |
 | -------- | -------- |
@@ -11,6 +11,6 @@ There is no difference between them in terms of privileges. If you are an author
 
 # Screenshots
 
-<img src="./image1" />
-<img src="./image2" />
-<img src="./image3" />
+<img src="/images/image1.png" />
+<img src="/images/image2.png" />
+<img src="/images/image3.47.31.png" />
