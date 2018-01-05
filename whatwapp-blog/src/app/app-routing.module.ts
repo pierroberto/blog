@@ -6,6 +6,7 @@ import { ItemDetailsComponent } from './components/item-details/item-details.com
 import { PostComponent } from './components/post/post.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/post', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'post', component: ListViewComponent },
   { path: 'post/:id', component: ItemDetailsComponent },

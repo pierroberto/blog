@@ -17,12 +17,13 @@ export class ItemViewComponent implements OnInit {
   hour: string;
 
   convertTime(time) {
+    // I convert the timestamp in readable time
     this.date = moment(this.item.date).format('dddd, MMMM DD, YYYY');
     this.hour = moment(this.item.date).format('hh:mm');
     return `${this.date} at ${this.hour}`;
   }
-  ngOnInit() {
 
+  ngOnInit() {
   }
 
 }

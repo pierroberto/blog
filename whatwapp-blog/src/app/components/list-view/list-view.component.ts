@@ -13,6 +13,8 @@ export class ListViewComponent implements OnInit {
   logged: boolean;
 
   ngOnInit() {
+    // I get the list of the posts and I sort them
+    // in order to display them in chronological order
     this.fakedb.getPosts().subscribe(fullList => {
       this.list = fullList;
       this.list = this.list.sort((a,b) => {
@@ -20,7 +22,7 @@ export class ListViewComponent implements OnInit {
       });
       this.fakedb.isLogged().subscribe(logged => {
         if (logged[0].status) this.logged = true;
-      })
+      });
     });
   }
 }

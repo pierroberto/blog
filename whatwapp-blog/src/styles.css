@@ -28,6 +28,10 @@ html {
   letter-spacing: 2px;
 }
 
+.btn:focus {
+  outline: none;
+}
+
 input {
   width: 100%;
   display: block;

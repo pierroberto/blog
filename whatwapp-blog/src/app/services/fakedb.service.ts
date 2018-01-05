@@ -11,7 +11,6 @@ export class FakedbService {
   private postUrl = 'api/posts'
 
   addPost(post) {
-    console.log('post info', post)
     const httpOptions = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' })
     };
@@ -19,7 +18,7 @@ export class FakedbService {
   }
 
   getUser(username, password) {
-    return this.http.get('api/authors')
+    return this.http.get('api/authors');
   }
 
   getPosts() {
@@ -51,7 +50,7 @@ export class FakedbService {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' })
     };
     return this.http.delete(`api/posts/${id}`)
-      .subscribe(_ => this.router.navigate([`/post`]))
+      .subscribe(_ => this.router.navigate([`/post`]));
   }
 
   getPost (id: number) {
@@ -67,7 +66,7 @@ export class FakedbService {
     const httpOptions = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' })
     };
-    return this.http.put('api/login', status, httpOptions)
+    return this.http.put('api/login', status, httpOptions);
   }
 
 }

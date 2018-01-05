@@ -9,17 +9,15 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(private fakedb: FakedbService, private route:ActivatedRoute, private router:Router) {}
+  constructor(private fakedb: FakedbService, private route:ActivatedRoute, private router:Router) { }
 
   checkLogin() {
     this.fakedb.isLogged().subscribe(isLogged => {
-      if (isLogged[0].status) {
+      if (isLogged[0].status)
         this.fakedb.login({id: 0, status: false, user: ''}).subscribe(_ => this.router.navigate(['/post']));
-      } else {
+      else
         this.router.navigate(['/login']);
-      }
     });
-
   }
 
   ngOnInit() {
