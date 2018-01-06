@@ -14,3 +14,4 @@ There is no difference between them in terms of privileges. If you are an author
 <img src="/images/image1.png" />
 <img src="/images/image2.png" />
 <img src="/images/image3.47.31.png" />
+<img src="/images/image4.png" />
