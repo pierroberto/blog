@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FakedbService } from '../../services/fakedb.service';
 import { ActivatedRoute, Router } from '@angular/router';
-const moment = require('moment');
+import moment = require('moment');
 
 @Component({
   selector: 'app-item-details',
@@ -16,7 +16,7 @@ export class ItemDetailsComponent implements OnInit {
   date: string;
   hour: string;
   logged: boolean;
-  item: any;
+  item:any = {title: '', author: ''};
 
   deletePost () {
     return this.fakedb.deletePost(Number(this.id));

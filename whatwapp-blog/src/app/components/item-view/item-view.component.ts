@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-const moment = require('moment');
+import moment = require('moment');
 
 @Component({
   selector: 'app-item-view',
